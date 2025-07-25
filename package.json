@@ -1,0 +1,32 @@
+{
+  "name": "returntextoptimizer",
+  "version": "1.0.0",
+  "description": "**ReturnTextOptimizer** ist ein intelligentes E-Commerce-Plugin für Shopify und WooCommerce, das mithilfe von GPT Rücksendegründe analysiert und automatisch bessere Produktbeschreibungen vorschlägt – zur Reduktion von Retouren und Steigerung der Kundenzufriedenheit.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "migrate": "node db/migrate.js",
+    "test": "mocha",
+    "package": "node scripts/package-plugin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "openai": "^5.10.2",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1",
+    "pg-mem": "^2.1.3",
+    "supertest": "^7.1.4",
+    "archiver": "^5.3.1"
+  }
+}

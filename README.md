@@ -7,11 +7,21 @@
 ## 🚀 Funktionsübersicht
 
 - Analyse von Rücksendungen (Freitext oder API)
-- Clustering von Retourengründen je Produkt
+- Kategorisierung und Clustering von Retourengründen je Produkt
 - GPT-generierte Textvorschläge zur Beschreibungskorrektur
 - Webinterface für Shopbetreiber: Vorschauen, Entscheidungen, Historie
+- Einfaches Admin-Dashboard mit Login und Session-Handling
+- Produktliste mit Rücksendequote
+- Dialog zur Annahme oder Ablehnung von GPT-Vorschlägen
+- Änderungslog und Settings-Ansicht
 - Direkte Integration in Shopify/WooCommerce via API
+- Aktualisierung der Produktbeschreibung via patchProduct
+- Automatische Speicherung von Analyseergebnissen in der Datenbank
+- Scheduler führt täglich eine Analyse aller Produkte durch
+- Einfacher OAuth2-Flow für Shopify (Placeholder)
+- Feedback-API zum Annehmen oder Ablehnen von Vorschlägen
 - DSGVO-konform und API-sparsam
+- Speichert keinerlei personenbezogene Kundendaten
 
 ---
 
@@ -44,8 +54,10 @@ returntextoptimizer/
 
 ## 🧪 Testdaten
 
-- Beispiel-Retouren befinden sich in `/test-data/returns.csv`
-- Beispielprodukte in `/test-data/products.json`
+Für Entwicklung und Tests liegen Beispiel-Retouren und Produkte direkt im Repository.
+
+- `returns.csv` enthält einige typische Rücksendegründe
+- `products.json` listet die dazugehörigen Testprodukte
 
 ---
 
@@ -57,11 +69,38 @@ cd returntextoptimizer
 npm install
 cp .env.example .env
 # API- und DB-Zugangsdaten in .env eintragen
+npm run migrate # legt Tabellen an
 npm run dev
+npm test # optional: startet die Beispieltests
 ```
 
-Frontend läuft auf: `http://localhost:3000`  
-Backend auf: `http://localhost:5000`
+Frontend & Backend laufen auf: `http://localhost:5000`
+Beispiel-Endpunkte:
+- `/products` – liefert Produktliste
+- `/returns` – liefert Test-Retouren
+- `/analyze/:id` – GPT-Vorschlag für Produkt
+- `/categories/:id` – gruppierte Rücksendegründe
+- `/suggestions` – gespeicherte Vorschläge abrufen
+- `/feedback/:id` – Vorschlag annehmen oder ablehnen (POST)
+- `/apply/:id` – Produktbeschreibung aktualisieren (POST)
+- `/stats` – Produktliste mit Rücksendeanzahl (Login erforderlich)
+- `/login` – Session starten
+- `/auth/shopify` – OAuth2-Startpunkt (Placeholder)
+
+---
+
+## 🚀 Deployment
+
+Ausführliche Schritte findest du in [docs/DEPLOY.md](docs/DEPLOY.md).
+Kurz zusammengefasst kannst du per Docker deployen:
+
+```bash
+# Railway oder Vercel Projekt anlegen
+# Umgebungsvariablen aus .env.example setzen
+docker build -t rto .
+docker run -p 5000:5000 rto
+```
+`npm run package` erstellt außerdem ein ZIP-Archiv `plugin.zip` für Shopify/WooCommerce.
 
 ---
 

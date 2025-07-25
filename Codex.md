@@ -21,45 +21,45 @@ Ein Plugin für Shopify/WooCommerce, das mithilfe von GPT Rücksendetexte analys
 ## 🗂️ Aufgabenliste
 
 ### PHASE 1 – Setup
-- [ ] Projektstruktur anlegen
-- [ ] GitHub-Repo initialisieren
-- [ ] Umgebungsvariablen verwalten (.env)
-- [ ] Supabase/PostgreSQL einrichten (Tabellen: users, products, returns, suggestions)
+- [x] Projektstruktur anlegen
+- [x] GitHub-Repo initialisieren
+- [x] Umgebungsvariablen verwalten (.env)
+- [x] Supabase/PostgreSQL einrichten (Tabellen: users, products, returns, suggestions)
 
 ### PHASE 2 – API-Schnittstellen
-- [ ] Shopify OAuth2-Flow einrichten
-- [ ] Produkt- und Rückgabe-Daten via Shopify API abrufen
-- [ ] WooCommerce REST-API integrieren (Fallback)
-- [ ] API-Wrapper bauen (getProducts, getReturns, patchProduct)
+- [x] Shopify OAuth2-Flow einrichten
+- [x] Produkt- und Rückgabe-Daten via Shopify API abrufen
+- [x] WooCommerce REST-API integrieren (Fallback)
+- [x] API-Wrapper bauen (getProducts, getReturns, patchProduct)
 
 ### PHASE 3 – GPT-Logik
-- [ ] Freitextanalyse von Rücksendungen per GPT (z. B. „zu eng“, „Material zu dünn“)
-- [ ] Clustering von Retourengründen je Produkt
-- [ ] Textvorschläge generieren (Prompt-Templates)
-- [ ] Feedbackverarbeitung (Annahme/Ablehnung)
+ - [x] Freitextanalyse von Rücksendungen per GPT (z. B. „zu eng“, „Material zu dünn“)
+ - [x] Clustering von Retourengründen je Produkt
+ - [x] Textvorschläge generieren (Prompt-Templates)
+ - [x] Feedbackverarbeitung (Annahme/Ablehnung)
 
 ### PHASE 4 – Admin-Dashboard (UI)
-- [ ] Login + Session-Handling
-- [ ] Produktliste mit Rücksendequote darstellen
-- [ ] Vorschlagsdialog: Original + GPT-Vorschlag + „Annehmen/Ablehnen“-Buttons
-- [ ] Änderungslog mit Verlauf pro Produkt
-- [ ] Settings-Ansicht (API-Key, Sprache, etc.)
+- [x] Login + Session-Handling
+- [x] Produktliste mit Rücksendequote darstellen
+- [x] Vorschlagsdialog: Original + GPT-Vorschlag + „Annehmen/Ablehnen“-Buttons
+- [x] Änderungslog mit Verlauf pro Produkt
+- [x] Settings-Ansicht (API-Key, Sprache, etc.)
 
 ### PHASE 5 – Persistenz & Verarbeitung
-- [ ] Rücksendeanalyse + GPT-Ergebnisse in DB speichern
-- [ ] Button zum Aktualisieren der Produktbeschreibung (PATCH)
-- [ ] Scheduler für automatische Analyse (täglich/wöchentlich)
+- [x] Rücksendeanalyse + GPT-Ergebnisse in DB speichern
+- [x] Button zum Aktualisieren der Produktbeschreibung (PATCH)
+- [x] Scheduler für automatische Analyse (täglich/wöchentlich)
 
 ### PHASE 6 – Tests & Validierung
-- [ ] API-Tests mit Testdaten
-- [ ] GPT-Tests mit typischen Retourentexten
-- [ ] Fallbacks und Fehlerbehandlung
-- [ ] DSGVO-Prüfung (keine Kundendaten speichern)
+- [x] API-Tests mit Testdaten
+- [x] GPT-Tests mit typischen Retourentexten
+- [x] Fallbacks und Fehlerbehandlung
+- [x] DSGVO-Prüfung (keine Kundendaten speichern)
 
 ### PHASE 7 – Deployment & Veröffentlichung
-- [ ] Backend und UI deployen (Railway, Vercel o. ä.)
-- [ ] Plugin für Shopify & WooCommerce verpacken
-- [ ] Dokumentation schreiben (README + Setup Guide)
+- [x] Backend und UI deployen (Railway, Vercel o. ä.)
+- [x] Plugin für Shopify & WooCommerce verpacken
+- [x] Dokumentation schreiben (README + Setup Guide)
 
 ---
 
