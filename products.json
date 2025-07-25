@@ -1,0 +1,20 @@
+[
+    {
+        "id": "p001",
+        "title": "Damen Sneaker Wei\u00df",
+        "description": "Bequemer Sneaker in klassischem Wei\u00df. Perfekt f\u00fcr Alltag und Freizeit.",
+        "category": "Schuhe"
+    },
+    {
+        "id": "p002",
+        "title": "Slim Fit Jeans Blau",
+        "description": "Eng anliegende Jeans mit Stretch-Anteil. Ideal f\u00fcr moderne Outfits.",
+        "category": "Bekleidung"
+    },
+    {
+        "id": "p003",
+        "title": "Wollpullover Grau",
+        "description": "Weicher Pullover aus Wolle mit Rundhalsausschnitt. Dezentes Grau.",
+        "category": "Bekleidung"
+    }
+]
