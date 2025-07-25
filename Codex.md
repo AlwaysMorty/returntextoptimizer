@@ -57,9 +57,9 @@ Ein Plugin für Shopify/WooCommerce, das mithilfe von GPT Rücksendetexte analys
 - [x] DSGVO-Prüfung (keine Kundendaten speichern)
 
 ### PHASE 7 – Deployment & Veröffentlichung
-- [ ] Backend und UI deployen (Railway, Vercel o. ä.)
-- [ ] Plugin für Shopify & WooCommerce verpacken
-- [ ] Dokumentation schreiben (README + Setup Guide)
+- [x] Backend und UI deployen (Railway, Vercel o. ä.)
+- [x] Plugin für Shopify & WooCommerce verpacken
+- [x] Dokumentation schreiben (README + Setup Guide)
 
 ---
 

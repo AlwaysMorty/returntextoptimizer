@@ -89,6 +89,21 @@ Beispiel-Endpunkte:
 
 ---
 
+## 🚀 Deployment
+
+Ausführliche Schritte findest du in [docs/DEPLOY.md](docs/DEPLOY.md).
+Kurz zusammengefasst kannst du per Docker deployen:
+
+```bash
+# Railway oder Vercel Projekt anlegen
+# Umgebungsvariablen aus .env.example setzen
+docker build -t rto .
+docker run -p 5000:5000 rto
+```
+`npm run package` erstellt außerdem ein ZIP-Archiv `plugin.zip` für Shopify/WooCommerce.
+
+---
+
 ## 📑 Lizenz
 
 MIT – frei verwendbar unter Angabe der Urheberschaft.
