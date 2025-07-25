@@ -18,19 +18,42 @@ Ein Plugin für Shopify/WooCommerce, das mithilfe von GPT Rücksendetexte analys
 
 ---
 
+
+## 🎯 Erstes Ziel
+Eine lokal ausführbare MVP-Version, die:
+    Produkt- und Retourendaten aus Beispieldateien lädt
+    Freitext-Retourengründe per GPT analysiert (über Dummy-GPT-Wrapper)
+    Rückgaben strukturiert und Handlungsempfehlungen ausgibt
+
+---
+
+## 🧠 GPT-Integration
+Verwende vorerst gpt-3.5-turbo über Platzhalter-Wrapper
+Die Analyse soll:
+    Kategorie des Problems erkennen (z. B. „Größe“, „Material“)
+    Verbesserungsvorschläge für Produkttext oder Beschreibung liefern
+
+---
+
+## 📘 Hinweis zur Kommunikation
+Wenn du Meilensteine erreichst, dokumentiere sie im Projekt (README, Code-Kommentare) und gib mir hier kurz Bescheid.
+Arbeite möglichst modular, kommentiert und verständlich.
+
+---
+
 ## 🗂️ Aufgabenliste
 
 ### PHASE 1 – Setup
-- [ ] Projektstruktur anlegen
-- [ ] GitHub-Repo initialisieren
-- [ ] Umgebungsvariablen verwalten (.env)
-- [ ] Supabase/PostgreSQL einrichten (Tabellen: users, products, returns, suggestions)
+- [ ] Erstelle index.js oder app.js mit Express-Server
+- [ ] Richte Umgebungsvariablen (dotenv) und ein einfaches Logging ein
+- [ ] Lade lokale Testdaten aus products.json und returns.csv
+- [ ] Lege Datei- oder DB-Schema-Strukturen an
 
 ### PHASE 2 – API-Schnittstellen
-- [ ] Shopify OAuth2-Flow einrichten
-- [ ] Produkt- und Rückgabe-Daten via Shopify API abrufen
+- [ ] Erstelle Platzhalterfunktionen für Shopify & WooCommerce (z. B. importProducts() in shopify.js)
+- [ ] Keine echten API-Keys erforderlich – verwende Dummy-Rückgaben
 - [ ] WooCommerce REST-API integrieren (Fallback)
-- [ ] API-Wrapper bauen (getProducts, getReturns, patchProduct)
+- [ ] Dokumentiere geplante Endpunkte in api/
 
 ### PHASE 3 – GPT-Logik
 - [ ] Freitextanalyse von Rücksendungen per GPT (z. B. „zu eng“, „Material zu dünn“)
